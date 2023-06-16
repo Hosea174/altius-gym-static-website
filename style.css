@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
 
 /* var declaration */
 :root {
@@ -15,7 +15,7 @@
   --clr-neutral-700: rgb(44, 61, 67);
 
   --ff-primary: "Roboto", sans-serif;
-  --ff-body: "Inter", sans-serif;
+  --ff-body: "Poppins", sans-serif;
 
   --fw-lighter: 300;
   --fw-regular: 400;
@@ -47,7 +47,6 @@
 
 @media (min-width: 50em) {
   :root {
-    --fs-body: var(--fs-500);
     --fs-primary-heading: var(--fs-900);
     --fs-secondary-heading: var(--fs-800);
     --fs-tertiary-heading: var(--fs-700);
@@ -88,7 +87,7 @@ body {
 /* Set core body defaults */
 body {
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 /* A elements that don't have a class get default styles */
@@ -127,7 +126,7 @@ svg {
 }
 
 :where(.flow :not(:first-child)) {
-  margin-top: 1em;
+  margin-top: 1.2em;
 }
 
 .flow {
@@ -138,8 +137,8 @@ svg {
   display: grid;
   align-items: center;
   gap: 3rem;
-  grid-template-columns: 3fr 2.6fr;
 }
+
 
 @media (min-width: 50em) {
   .even-columns {
@@ -231,10 +230,34 @@ svg {
 
 .fs-secondary-heading {
   font-size: var(--fs-secondary-heading);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  margin-block-end: var(--size-900);
+  padding-bottom: 17px;
+  background-image: url('/resources/underline.svg');
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 100% 35px;
+
 }
+
 
 .fs-tertiary-heading {
   font-size: var(--fs-tertiary-heading);
+  white-space: nowrap;
+}
+
+.fs-tertiary-heading::after {
+  content: "";
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background-image: url("/resources/dot.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 5px;
 }
 
 .fs-300 {
@@ -379,7 +402,9 @@ header {
 .primary-socials {
   display: flex;
   gap: var(--size-500);
+  cursor: pointer;
 }
+
 
 .nav-list {
   font-size: var(--fs-nav);
@@ -482,14 +507,84 @@ header {
 /* hero section*/
 
 .hero-btns button {
-  margin-left: 7px;
+  margin-left: 10px;
+}
+
+.hero-btns {
+  margin-top: 30px;
 }
 
 .gradient-font {
-  color: rgb(35, 41, 43);
+  color: rgb(34, 44, 48);
   background: linear-gradient(to right, rgba(249, 248, 113, 0.7), rgba(0, 104, 191, 1));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-stroke: 0.125em transparent;
   letter-spacing: 0.12em;
 }
+
+.three-columns {
+  display: flex;
+  margin-block-start: var(--size-700);
+}
+
+.item {
+  flex: 1;
+  margin-inline: 15px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 15px 18px;
+  background-color: rgb(0, 44, 75, .86);
+  line-height: 1.4rem;
+  box-shadow: 1px 4px 20px 2px rgba(0, 0, 0, 0.208);
+  border-radius: 5px;
+}
+
+.item p:nth-of-type(2) {
+  margin-top: 6px;
+}
+
+/* Services section */
+
+#services img {
+
+  width: 100%;
+  height: auto;
+}
+
+#services .container {
+  display: grid;
+  gap: var(--size-700);
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+}
+
+#services .even-columns {
+  /* outline: 3px solid blue; */
+  overflow: hidden;
+}
+
+#services img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.description {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+
+@media (min-width: 50em) {
+  #services .container {
+    grid-auto-flow: row;
+    grid-auto-rows: 1fr;
+  }
+}
+
+
+
