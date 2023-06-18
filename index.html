@@ -6,6 +6,8 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="//unpkg.com/a11y-slider@latest/dist/a11y-slider.css" />
+  <script src="//unpkg.com/a11y-slider@latest/dist/a11y-slider.js"></script>
   <title>Altius gym</title>
 </head>
 
@@ -50,8 +52,8 @@
 
           <img src="/resources/runner 1.png" alt="athlete">
         </div>
-        <div class="three-columns">
-          <div class="item">
+        <div class="features">
+          <div class="item flow" style="--flow-spacer: 0.8rem">
             <img src="/resources/open-hrs.svg" alt="Hours">
             <div>
               <p class="fw-bold">Open Hours</p>
@@ -59,7 +61,7 @@
             </div>
           </div>
 
-          <div class="item">
+          <div class="item flow" style="--flow-spacer: 0.8rem">
             <img src="resources/gym-cls.svg" alt="Gym Classes">
             <div>
               <p class="fw-bold">Gym Classes</p>
@@ -67,7 +69,7 @@
             </div>
           </div>
 
-          <div class="item">
+          <div class="item flow" style="--flow-spacer: 0.8rem">
             <img src="resources/welcoming-community.svg" alt="Welcoming community">
             <div>
               <p class="fw-bold">Welcoming Community</p>
@@ -173,12 +175,93 @@
       </div>
     </section>
 
-    <section class="padding-block-700">
+    <section class="padding-block-700" id="testimonials">
       <h2 class="fs-secondary-heading fw-bold">testimonials</h2>
 
       <div class="container">
-        <h3 class="fw-semi-bold fs-tertiary-heading">Inspiring words from our members</h3>
+        <h3 class="fw-semi-bold fs-tertiary-heading">Hear it from our members</h3>
         <!-- carousel -->
+        <ul class="slider">
+          <li>
+            <img src="/resources/jane-avatar.png" alt="">
+            <div class="slider-content | flow" style="--flow-spacer: 1rem">
+              <h3 class="fw-bold">Jane</h3>
+              <p>
+                I've been a member at Altius gym for a few months now, and I'm so glad I joined. The classes are
+                top-notch
+                and the
+                trainers are really knowledgeable. I feel like I'm making progress every week and I can't wait to see
+                where I'll be in a
+                few more months. Highly recommend!
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <img src="/resources/Richard-avatar.png" alt="">
+            <div class="slider-content | flow" style="--flow-spacer: 1rem">
+              <h3 class="fw-bold">Richard</h3>
+              <p>Altius gym has truly changed my life. I was hesitant to join a gym at first, but the coaches and staff
+                made me feel
+                comfortable and supported from day one. I have lost weight, gained strength, and made lifelong friends
+                along the way.
+              </p>
+            </div>
+          </li>
+          <li>
+            <img src="/resources/Lia-avatar.png" alt="">
+            <div class="slider-content | flow" style="--flow-spacer: 1rem">
+              <h3 class="fw-bold">Lia</h3>
+              <p style="text-align: center;">
+                Altius gym is hands down the best gym I've ever been to. The equipment is top-notch, the trainers are
+                knowledgeable and
+                friendly, and the overall atmosphere is welcoming and motivating. I've seen incredible progress in my
+                fitness journey
+                since joining Altius and couldn't be happier with my experience.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <img src="/resources/Richard-avatar.png" alt="">
+            <div class="slider-content | flow" style="--flow-spacer: 1rem">
+              <h3 class="fw-bold">Richard</h3>
+              <p>Altius gym has truly changed my life. I was hesitant to join a gym at first, but the coaches and staff
+                made me feel
+                comfortable and supported from day one. I have lost weight, gained strength, and made lifelong friends
+                along the way.
+              </p>
+            </div>
+          </li>
+
+
+          <li>
+            <img src="/resources/Richard-avatar.png" alt="">
+            <div class="slider-content | flow" style="--flow-spacer: 1rem">
+              <h3 class="fw-bold">Richard</h3>
+              <p>Altius gym has truly changed my life. I was hesitant to join a gym at first, but the coaches and staff
+                made me feel
+                comfortable and supported from day one. I have lost weight, gained strength, and made lifelong friends
+                along the way.
+              </p>
+            </div>
+          </li>
+
+
+          <li>
+            <img src="/resources/Richard-avatar.png" alt="">
+            <div class="slider-content | flow" style="--flow-spacer: 1rem">
+              <h3 class="fw-bold">Richard</h3>
+              <p>Altius gym has truly changed my life. I was hesitant to join a gym at first, but the coaches and staff
+                made me feel
+                comfortable and supported from day one. I have lost weight, gained strength, and made lifelong friends
+                along the way.
+              </p>
+            </div>
+          </li>
+
+
+        </ul>
         <div></div>
         <button class="button-primary"><span>Join us now</span></button>
 

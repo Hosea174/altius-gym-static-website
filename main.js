@@ -17,3 +17,9 @@ navToggle.addEventListener("click", () => {
   nav.toggleAttribute("data-visible");
   header.toggleAttribute("data-overlay");
 });
+
+const slider = new A11YSlider(document.querySelector(".slider"), {
+  adaptiveHeight: true,
+  dots: true,
+  // slidesToShow: 4
+});
