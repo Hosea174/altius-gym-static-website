@@ -28,3 +28,17 @@ const slider = new A11YSlider(document.querySelector(".slider"), {
     },
   }
 });
+
+const slider2 = new A11YSlider(document.querySelector(".slider2"), {
+  adaptiveHeight: true,
+  dots: true,
+  arrows: false,
+  SlidesToShow: 1,
+  autoplay: true,
+  autoplaySpeed: 2500,
+  // responsive: {
+  //   770: {
+  //     arrows: true,
+  //   },
+  // }
+});
