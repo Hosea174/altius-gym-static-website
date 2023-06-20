@@ -123,11 +123,12 @@ picture {
   display: flex;
   align-items: center;
   padding-inline: calc((100vw - 1230px)/2);
+  height: 85vh;
 
 }
 
 .slider2 li img {
-  height: 500px;
+  height: 637px;
 }
 
 .slider>*,
@@ -184,7 +185,6 @@ picture {
 .a11y-slider-dots {
   display: flex;
   justify-content: center;
-  margin-block-start: var(--size-900);
 }
 
 @media(min-width: 30em) {
@@ -909,7 +909,7 @@ header::before {
   background-image: url("/resources/glow-bg.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
 }
 
 #testimonials h3 {
@@ -947,5 +947,23 @@ header::before {
 
 #coach-3 {
   background-image: url("/resources/c3-bg.png");
+}
+
+.coach-name {
+    -webkit-text-fill-color: transparent;
+    font-size: 6rem;
+    font-family: 'Roboto' sans-serif;
+    font-weight: var(--fw-semi-bold);
+}
+/* contact us */
+
+#google-map iframe {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#contact-us h3 {
+  text-align: center;
+  margin-block-end: var(--size-600);
 }
 
