@@ -264,7 +264,7 @@
       </div>
     </section>
 
-    <section class="padding-block-700">
+    <section class="padding-block-700" id="meet-coaches">
       <h2 class="fs-secondary-heading fw-bold">meet your coaches</h2>
 
       <div>
@@ -313,48 +313,63 @@
       </div>
     </section>
 
-    <section class="padding-block-700" id="contact-us">
+    <section id="contact-us">
       <h2 class="fs-secondary-heading fw-bold">contact us</h2>
 
       <div class="container">
 
         <h3 class="fs-tertiary-heading fw-semi-bold">Have some questions? leave us a message!</h3>
-        <div id="google-map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2444.896157993504!2d38.850847903057165!3d9.008210975149385!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b9aec726bb493%3A0x5428269c7a15b21!2sAltius%20gymnasium!5e0!3m2!1sen!2set!4v1687287140234!5m2!1sen!2set"
-            width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <form action="">
-          <input type="text" name="name" id="name" placeholder="Name">
-          <input type="text" name="email" id="email" placeholder="Email">
-          <textarea name="message" id="message" cols="30" rows="10"></textarea>
-          <div>
-            <button class="button-tertiary">Send message</button>
-            <img src="" alt="" class="line">
-            <div>
-              <div>
-                <img src="" alt="">
-                <p>+251 91 119 6395</p>
-              </div>
-              <div>
-                <img src="" alt="">
-                <p>Summit NOC building 2nd floor</p>
-              </div>
-              <div>
-                <img src="" alt="">
-                <p>altiusgym@gmail.com</p>
+        <div class="contact-wrapper">
+          <form class="form-container">
+            <div class="input-wrapper">
+              <input type="text" name="name" id="name" placeholder="Name">
+              <span class="input-border"></span>
+            </div>
+
+            <div class="input-wrapper">
+              <input type="text" name="email" id="email" placeholder="Email">
+              <span class="input-border"></span>
+            </div>
+
+            <div class="input-wrapper">
+              <textarea name="message" id="message" placeholder="Message"></textarea>
+              <span class="input-border" style="bottom: 18px"></span>
+            </div>
+            <div class="info-wrapper">
+              <button class="button-tertiary fw-bold" >Send message</button>
+              <div class="contact-info">
+                <div>
+                  <img src="/resources/phone-icon.svg" alt="">
+                  <p>+251 91 119 6395</p>
+                </div>
+                <div>
+                  <img src="/resources/location-icon.svg" alt="">
+                  <p>Summit NOC building 2nd floor</p>
+                </div>
+                <div>
+                  <img src="/resources/email-icon.svg" alt="">
+                  <p>altiusgym@gmail.com</p>
+                </div>
               </div>
             </div>
+          </form>
+          <div id="google-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2444.896157993504!2d38.850847903057165!3d9.008210975149385!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b9aec726bb493%3A0x5428269c7a15b21!2sAltius%20gymnasium!5e0!3m2!1sen!2set!4v1687287140234!5m2!1sen!2set"
+              width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-        </form>
+        </div>
+
+
       </div>
     </section>
   </main>
+  
   <footer class="padding-block-700">
     <div class="container">
 
-      <form action="">
+      <form>
         <input type="text" name="email" id="signup-email" placeholder="Enter Your Email">
         <button class="tertiary-button">Submit</button>
       </form>
