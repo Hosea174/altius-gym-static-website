@@ -559,11 +559,64 @@ header {
   display: none;
 }
 
-.primary-socials {
+.socials {
   display: flex;
   gap: var(--size-500);
   cursor: pointer;
+  list-style: none;
+  width: 150px;
+
 }
+
+.socials li {
+  height: 21px;
+  width: 19px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: all 0.3s ease-in-out;
+
+}
+
+#tiktok-primary {
+  background-image: url("/resources/tiktok.svg");
+}
+
+#fb-primary {
+  background-image: url("/resources/fb.svg");
+}
+
+#insta-primary {
+  background-image: url("/resources/insta.svg");
+}
+
+#yt-primary {
+  background-image: url("/resources/yt.svg");
+}
+
+#tiktok-primary:hover {
+  background-image: url("/resources/tiktok-reverse.svg");
+  transform: translateY(-5px)
+}
+
+#fb-primary:hover {
+  background-image: url("/resources/fb-reverse.svg");
+  transform: translateY(-5px)
+}
+
+#insta-primary:hover {
+  background-image: url("/resources/insta-reverse.svg");
+  transform: translateY(-5px)
+}
+
+#yt-primary:hover {
+  background-image: url("/resources/yt-reverse.svg");
+  transform: translateY(-5px)
+}
+
+
+
+
 
 .nav-list {
   font-size: var(--fs-nav);
@@ -590,7 +643,7 @@ header {
 }
 
 @media (max-width: 50em) {
-  .primary-socials {
+  .socials {
     order: 2;
   }
 
@@ -651,11 +704,11 @@ header {
 }
 
 @media (max-width: 28em) {
-  .primary-socials img {
+  .socials img {
     max-width: 16px;
   }
 
-  .primary-socials {
+  .socials {
     gap: 15px;
     margin-right: 10px;
   }
@@ -693,6 +746,7 @@ header::before {
 
 .hero-btns button {
   margin-left: 10px;
+  margin-top: var(--size-300);
 }
 
 .hero-btns {
@@ -978,7 +1032,7 @@ header::before {
 
 .form-container {
   --border-height: 1px;
-  --border-before-color: rgba(221, 221, 221, 0.39);
+  --border-before-color: rgba(221, 221, 221, 0.599);
   --input-hovered-color: #49e0bd14;
   flex-basis: 50%;
 }
@@ -991,7 +1045,7 @@ header::before {
 .form-container textarea {
   width: 100%;
   margin-bottom: 10px;
-  color: #fff;
+  color: var(--clr-neutral-400);
   font-size: 0.9rem;
   background-color: transparent;
   width: 100%;
@@ -1147,6 +1201,7 @@ footer {
 }
 
 .button--submit {
+  position: relative;
   min-height: 50px;
   padding: .5em 1.5em;
   border: none;
@@ -1155,11 +1210,12 @@ footer {
   color: #fff;
   font-size: 15px;
   cursor: pointer;
-  transition: background-color .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  z-index: 1;
 }
 
 .button--submit:hover {
-  background-color: rgb(0, 91, 165);
+  background-color: #005ca7;
 }
 
 .footer-input:focus,
@@ -1168,7 +1224,7 @@ footer {
   outline: none;
 }
 
-footer .primary-socials {
+footer .socials {
   justify-content: center;
   margin-block: 45px;
 }
