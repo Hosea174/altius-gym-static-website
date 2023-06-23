@@ -7,7 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="//unpkg.com/a11y-slider@latest/dist/a11y-slider.css" />
-  <script src="//unpkg.com/a11y-slider@latest/dist/a11y-slider.js"></script>
+  <script defer src="//unpkg.com/a11y-slider@latest/dist/a11y-slider.js"></script>
+  <link rel="icon" type="image/png" href="/resources/altius-favicon.png" sizes="32x32">
+
   <title>Altius gym</title>
 </head>
 
@@ -25,7 +27,7 @@
             <li><a href="#"></a>Home</li>
             <li><a href="#"></a>Gallery</li>
             <li><a href="#"></a>Pricing</li>
-            <li><a href="#"></a>Contact</li>
+            <li><a href="#contact-us"></a>Contact</li>
             <li><a href="#"></a>Events</li>
           </ul>
         </nav>
@@ -57,19 +59,20 @@
   <main>
     <section class="padding-block-700" id="hero">
       <div class="container">
-        <div class="even-columns" style="grid-template-columns: 3fr 2.6fr;">
+        <div class="even-columns slide-up" style="grid-template-columns: 3fr 2.6fr;">
           <div class="flow">
             <h1 class="fs-primary-heading fw-bold"><span class="gradient-font">Elevate</span> your fitness game</h1>
-            <p>Embrace the challenge, transcend your boundaries, and unleash your untapped potential at Altius Gym.</p>
+            <p class="hero-subtitle">Embrace the challenge, transcend your boundaries, and unleash your untapped
+              potential at Altius Gym.</p>
             <div class="hero-btns">
               <a href=""><button class="button-primary"><span>Join Now</span></button></a>
-              <a href=""><button class="button-secondary"><span>contact us</span></button></a>
+              <a href="#contact-us"><button class="button-secondary"><span>contact us</span></button></a>
             </div>
           </div>
 
-          <img src="/resources/runner 1.png" alt="athlete">
+          <img class="hero-img" src="/resources/hero-img.png" alt="athlete">
         </div>
-        <div class="features">
+        <div class="features slide-up">
           <div class="item flow" style="--flow-spacer: 0.8rem">
             <img src="/resources/open-hrs.svg" alt="Hours">
             <div>
@@ -90,7 +93,7 @@
             <img src="resources/welcoming-community.svg" alt="Welcoming community">
             <div>
               <p class="fw-bold">Welcoming Community</p>
-              <p>Join our community of 115+ members and work with over 10 experienced coaches</p>
+              <p>Join our community of 115+ members and work with 8 experienced coaches</p>
             </div>
           </div>
         </div>
@@ -101,7 +104,7 @@
       <h2 class="fs-secondary-heading fw-bold">Our services</h2>
       <div class="container">
 
-        <div class="even-columns">
+        <div class="even-columns slide-right">
           <img src="/resources/classes.png">
 
           <div class="flow | description">
@@ -120,7 +123,7 @@
         </div>
 
 
-        <div class="even-columns">
+        <div class="even-columns slide-left">
           <div class="flow | description">
             <h3 class="fs-tertiary-heading fw-semi-bold">Modern gym equipment</h3>
             <p class="fs-400 fw-regular">Our gym is equipped with state-of-the-art machines and equipment that are
@@ -139,7 +142,7 @@
         </div>
 
 
-        <div class="even-columns">
+        <div class="even-columns slide-right">
           <img src="/resources/spa.png" alt="">
 
           <div class="flow | description">
@@ -165,7 +168,7 @@
       <h2 class="fs-secondary-heading fw-bold">About us</h2>
 
       <div class="container">
-        <div class="even-columns">
+        <div class="even-columns slide-up">
           <div class="abt-us-text">
             <h3 class="fs-tertiary-heading fw-semi-bold">Altius gym</h3>
             <p class="fs-600 fw-lighter">#1 gym in Ethiopia</p>
@@ -196,9 +199,9 @@
       <h2 class="fs-secondary-heading fw-bold">testimonials</h2>
 
       <div class="container">
-        <h3 class="fw-semi-bold fs-tertiary-heading">Hear it from our members</h3>
+        <h3 class="fw-semi-bold fs-tertiary-heading slide-up">Hear it from our members</h3>
         <!-- carousel -->
-        <ul class="slider">
+        <ul class="slider slide-up">
           <li>
             <img src="/resources/jane-avatar.png" alt="">
             <div class="slider-content | flow fw-lighter" style="--flow-spacer: 1rem">
@@ -281,7 +284,7 @@
       </div>
     </section>
 
-    <section class="padding-block-00" id="meet-coaches">
+    <section id="meet-coaches">
       <h2 class="fs-secondary-heading fw-bold">meet your coaches</h2>
 
       <div>
@@ -333,23 +336,24 @@
     <section id="contact-us">
       <h2 class="fs-secondary-heading fw-bold">contact us</h2>
 
-      <div class="container">
+      <div class="container slide-up">
 
         <h3 class="fs-tertiary-heading fw-semi-bold">Have some questions? leave us a message!</h3>
         <div class="contact-wrapper">
-          <form method="POST" action="https://formsubmit.co/19671a2e64d0632f57370886cbc8dab3" class="form-container">
+          <form method="POST" action="https://formsubmit.co/19671a2e64d0632f57370886cbc8dab3"
+            class="form-container hidden">
             <div class="input-wrapper">
-              <input type="text" name="name" id="name" placeholder="Name">
+              <input type="text" name="name" id="name" placeholder="Name" required>
               <span class="input-border"></span>
             </div>
 
             <div class="input-wrapper">
-              <input type="text" name="email" id="email" placeholder="Email">
+              <input type="email" name="email" id="email" placeholder="Email" required>
               <span class="input-border"></span>
             </div>
 
             <div class="input-wrapper">
-              <textarea name="message" id="message" placeholder="Message"></textarea>
+              <textarea name="message" id="message" placeholder="Message" required></textarea>
               <span class="input-border" style="bottom: 18px"></span>
             </div>
             <div class="info-wrapper">
@@ -386,14 +390,16 @@
   <footer class="padding-block-700">
     <div class="container" style="--flow-spacer: 10px;">
 
-      <form class="footer-form">
-        <input type="text" name="email" id="footer-email" class="footer-input" placeholder="Enter Your Email">
+      <form class="footer-form slide-up">
+        <input type="email" name="email" id="footer-email" class="footer-input" placeholder="Enter Your Email">
         <input class="button--submit" value="Subscribe" type="submit">
       </form>
-      <div class="socials">
-        <img src="/resources/tiktok.svg" alt=""><img src="/resources/fb.svg" alt=""><img src="resources/insta.svg"
-          alt=""><img src="resources/yt.svg" alt="">
-      </div>
+      <ul class="socials slide-up">
+        <li><a href="#"><img src="/resources/tiktok-reverse.svg" alt=""></a></li>
+        <li><a href="#"><img src="/resources/fb-reverse.svg" alt=""></a></li>
+        <li><a href="#"><img src="resources/insta-reverse.svg" alt=""></a></li>
+        <li><a href="#"><img src="resources/yt-reverse.svg" alt=""></a></li>
+      </ul>
       <p>&copy; 2023 Altius Gym. All rights reserved.</p>
     </div>
   </footer>

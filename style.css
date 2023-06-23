@@ -82,6 +82,11 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
+html {
+  scroll-behavior: smooth;
+
+}
+
 html,
 body {
   height: 100%;
@@ -91,6 +96,7 @@ body {
 body {
   text-rendering: optimizeSpeed;
   line-height: 1.8;
+  overflow-x: hidden;
 }
 
 /* A elements that don't have a class get default styles */
@@ -128,7 +134,7 @@ picture {
 }
 
 .slider2 li img {
-  height: 637px;
+  height: 611px;
 }
 
 .slider>*,
@@ -540,6 +546,51 @@ body {
   opacity: 1;
 }
 
+
+.hide-left {
+  opacity: 0;
+  transition: all 1.1s ease-in-out;
+  transform: translateX(-100%);
+  filter: blur(5px);
+}
+
+.hide-right {
+  opacity: 0;
+  transition: all 1.1s ease-in-out;
+  transform: translateX(100%);
+  filter: blur(5px);
+}
+
+.hide-down {
+  opacity: 0;
+  transition: all 1.1s ease-in-out;
+  transform: translateY(70px);
+  filter: blur(5px);
+}
+
+.slide-right-appear {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+
+.slide-left-appear {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+
+.slide-up-appear {
+  transform: translateY(0);
+  opacity: 1;
+  filter: blur(0);
+}
+@media(prefers-reduced-motion){
+  .hide-down, .hide-left, .hide-right {
+    transition: none;
+  }
+}
+
 /* navigation */
 header {
   padding-top: var(--size-600);
@@ -564,8 +615,6 @@ header {
   gap: var(--size-500);
   cursor: pointer;
   list-style: none;
-  width: 150px;
-
 }
 
 .socials li {
@@ -729,6 +778,24 @@ header::before {
 }
 
 /* hero section*/
+p.hero-subtitle,
+h1,
+.hero-img,
+.hero-btns {
+  opacity: 0;
+  animation: reveal 1.2s forwards 0s;
+}
+
+@keyframes reveal {
+  from {
+    transform: translateY(70px);
+  }
+  
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
 
 #hero::before {
   content: "";
@@ -826,6 +893,10 @@ header::before {
 }
 
 /* Services section */
+#services {
+  margin-block-end: 40px;
+}
+
 
 #services img {
   width: 100%;
@@ -939,7 +1010,8 @@ header::before {
 .abt-us-text {
   text-align: center;
   line-height: var(--size-600);
-  min-width: 300px;
+  width: 83%;
+  min-width: 420px;
   margin-inline: auto;
 }
 
@@ -1041,7 +1113,7 @@ header::before {
   position: relative;
 }
 
-.form-container input[type="text"],
+.form-container input,
 .form-container textarea {
   width: 100%;
   margin-bottom: 10px;
