@@ -1,0 +1,104 @@
+.pricing-title {
+    padding-block: 4rem;
+}
+
+.pricing-title p {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.pricing-plans {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    min-height: 800px;
+}
+
+
+.pricing-plans::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(/resources/ellipses-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 115% 120%;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.box {
+    padding: 1rem 2rem;
+}
+
+.individual-plan {
+    height: fit-content;
+    min-width: 500px;
+    border: 1px solid var(--clr-primary-300);
+    border-top: 5px solid var(--clr-primary-300);
+    background: rgba(0, 123, 182, 0.06);
+    backdrop-filter: blur(100px);
+}
+
+.group-plan {
+    height: fit-content;
+    min-width: 500px;
+    border: 1px solid var(--clr-accent-400);
+    border-top: 5px solid var(--clr-accent-400);
+    background: rgba(255, 204, 0, 0.04);
+    backdrop-filter: blur(100px);
+}
+
+.individual-plan .package,
+.group-plan .package {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.individual-plan .package {
+    background-image: url("/resources/custom-border.svg");
+}
+
+.group-plan .package {
+    background-image: url("/resources/custom-border-2.svg");
+}
+
+
+.package-perks li:before,
+.discount li:before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.package-perks li:before {
+    background-image: url("/resources/check.svg");
+}
+
+
+.hr-break {
+    margin-block: 2rem;
+    border: 2px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, #00C7A1 0%, rgba(0, 199, 161, 0.00) 0.01%, #00C7A1 50.83%, rgba(0, 199, 161, 0.00) 93.54%);
+}
+
+
+.discount li:before {
+    background-image: url("/resources/discount.svg");
+}
+
+.button-primary {
+    display: block;
+    margin: auto;
+}

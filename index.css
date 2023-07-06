@@ -471,6 +471,7 @@ h1,
 
 #testimonials h3 {
   text-align: center;
+  padding-top: 1rem;
 }
 
 #testimonials button.button-primary {
