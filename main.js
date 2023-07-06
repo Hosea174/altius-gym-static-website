@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const navLinks = document.querySelectorAll(".nav-link");
       navLinks.forEach((link) => {
         if (link.href === currentPageUrl) {
-          console.log(link.href)
+          console.log(link.href);
           link.classList.add("current-page");
         }
       });
@@ -91,4 +91,99 @@ document.addEventListener("DOMContentLoaded", function () {
         autoplaySpeed: 3000,
       });
     });
+});
+
+document
+  .getElementById("open-spinning-dialog")
+  .addEventListener("click", function () {
+    document.getElementById("spinning-dialog").showModal();
+  });
+document
+  .getElementById("open-mc-dialog")
+  .addEventListener("click", function () {
+    document.getElementById("mc-dialog").showModal();
+  });
+document
+  .getElementById("open-pc-dialog")
+  .addEventListener("click", function () {
+    document.getElementById("pc-dialog").showModal();
+  });
+document
+  .getElementById("open-ta-dialog")
+  .addEventListener("click", function () {
+    document.getElementById("ta-dialog").showModal();
+  });
+document
+  .getElementById("open-circuit-dialog")
+  .addEventListener("click", function () {
+    document.getElementById("circuit-dialog").showModal();
+  });
+document
+  .getElementById("open-hiit-dialog")
+  .addEventListener("click", function () {
+    document.getElementById("hiit-dialog").showModal();
+  });
+document
+  .getElementById("open-sa-dialog")
+  .addEventListener("click", function () {
+    document.getElementById("sa-dialog").showModal();
+  });
+document
+  .getElementById("open-ms-dialog")
+  .addEventListener("click", function () {
+    document.getElementById("ms-dialog").showModal();
+  });
+document
+  .getElementById("open-mh-dialog")
+  .addEventListener("click", function () {
+    document.getElementById("mh-dialog").showModal();
+  });
+document
+  .getElementById("open-fa-dialog")
+  .addEventListener("click", function () {
+    document.getElementById("fa-dialog").showModal();
+  });
+document
+  .getElementById("open-run-dialog")
+  .addEventListener("click", function () {
+    document.getElementById("run-dialog").showModal();
+  });
+document
+  .getElementById("open-as-dialog")
+  .addEventListener("click", function () {
+    document.getElementById("as-dialog").showModal();
+  });
+
+// const classNames = [
+//   "spinning",
+//   "mc",
+//   "pc",
+//   "te-abo",
+//   "circuit",
+//   "hiit",
+//   "sa",
+//   "ms",
+//   "mh",
+//   "fa",
+//   "run",
+//   "as",
+// ];
+
+// classNames.forEach((className) => {
+//   const openButton = document.getElementById(`open-${className}-dialog`);
+//   const dialog = document.getElementById(`${className}-dialog`);
+
+//   openButton.addEventListener("click", function () {
+//     dialog.showModal();
+//   });
+// });
+
+const closeBtn = document.querySelectorAll(".close-btn");
+const modals = document.querySelectorAll(".modal");
+closeBtn.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    modals.forEach((modal) => {
+      modal.close();
+    });
+  });
 });

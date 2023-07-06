@@ -24,8 +24,8 @@
         </div>
 
         <div class="container classes-list">
-<div class="card-wrapper">
-    
+            <div class="card-wrapper">
+
                 <div class="card">
                     <div class="img-box">
                         <img src="resources/classes/c1.png">
@@ -33,14 +33,14 @@
                     <div class="content">
                         <h2>Spinning</h2>
                         <div class="class-info">
-    
+
                             <img src="resources/zondicons_calendar.svg" alt="">
                             <p>Mon(8:30-9:30 AM), Tue(5:30-6:10 PM), Wed(8:30-9:10 AM), Thu(5:30-6:10 PM)</p>
-                            <a href="">Read More</a>
+                            <button id="open-spinning-dialog">Read More</button>
                         </div>
                     </div>
                 </div>
-</div>
+            </div>
 
             <div class="card-wrapper">
                 <div class="card">
@@ -52,7 +52,7 @@
                         <div class="class-info">
                             <img src="resources/zondicons_calendar.svg" alt="">
                             <p>Mon(9:00-10:00 AM)</p>
-                            <a href="">Read More</a>
+                            <button id="open-mc-dialog">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                         <div class="class-info">
                             <img src="resources/zondicons_calendar.svg" alt="">
                             <p>Mon(6:00-7:00 PM), Tue(6:40-8:00 AM), Tue(9:00-10:00 AM)</p>
-                            <a href="">Read More</a>
+                            <button id="open-pc-dialog">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                         <div class="class-info">
                             <img src="resources/zondicons_calendar.svg" alt="">
                             <p>Mon(7:00-8:00 PM), Thu(6:40-8:00 AM)</p>
-                            <a href="">Read More</a>
+                            <button id="open-ta-dialog">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -97,7 +97,7 @@
                         <div class="class-info">
                             <img src="resources/zondicons_calendar.svg" alt="">
                             <p>Tue(6:00-7:00 PM), Wed(9:00-10:00 AM)</p>
-                            <a href="">Read More</a>
+                            <button id="open-circuit-dialog">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -112,7 +112,7 @@
                         <div class="class-info">
                             <img src="resources/zondicons_calendar.svg" alt="">
                             <p>Wed(6:00-7:00 PM)</p>
-                            <a href="">Read More</a>
+                            <button id="open-hiit-dialog">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -127,7 +127,7 @@
                         <div class="class-info">
                             <img src="resources/zondicons_calendar.svg" alt="">
                             <p>Wed(7:00-8:00 PM)</p>
-                            <a href="">Read More</a>
+                            <button id="open-sa-dialog">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -142,7 +142,7 @@
                         <div class="class-info">
                             <img src="resources/zondicons_calendar.svg" alt="">
                             <p>Thu(9:00-10:00 AM), Fri(6:00-7:00 PM)</p>
-                            <a href="">Read More</a>
+                            <button id="open-ms-dialog">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -157,7 +157,7 @@
                         <div class="class-info">
                             <img src="resources/zondicons_calendar.svg" alt="">
                             <p>Thu(6:00-7:30 PM), Fri(9:00-10:00 AM)</p>
-                            <a href="">Read More</a>
+                            <button id="open-mh-dialog">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -172,7 +172,7 @@
                         <div class="class-info">
                             <img src="resources/zondicons_calendar.svg" alt="">
                             <p>Fri(7:00-8:00 PM)</p>
-                            <a href="">Read More</a>
+                            <button id="open-fa-dialog">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -187,7 +187,7 @@
                         <div class="class-info">
                             <img src="resources/zondicons_calendar.svg" alt="">
                             <p>Sat(5:00-6:00 AM)</p>
-                            <a href="">Read More</a>
+                            <button id="open-run-dialog">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -202,12 +202,234 @@
                         <div class="class-info">
                             <img src="resources/zondicons_calendar.svg" alt="">
                             <p>Sat(6:30-8:00 AM)</p>
-                            <a href="">Read More</a>
+                            <button id="open-as-dialog">Read More</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <dialog id="spinning-dialog" class="modal">
+            <div class="dialog-header">
+                <button class="close-btn"></button>
+            </div>
+            <div class="dialog-content">
+                <img class="class-img" src="/resources/classes/c11.png" alt="Spinning Image">
+                <h2 class="fs-600">Spinning</h2>
+                <p class="description">Spinning is an indoor cycling class that combines cardio, strength, and endurance
+                    training on stationary bikes. It's a
+                    high-energy workout that simulates outdoor cycling with various intensity levels. Enjoy an
+                    exhilarating ride that burns
+                    calories, improves cardiovascular health, and strengthens your lower body muscles.</p>
+                <div class="schedule">
+                    <img class="cal-icon" src="resources/zondicons_calendar.svg" alt="Calendar Icon">
+                    <p>Class Schedule: Mon, Wed, Fri | 10:00 AM - 11:00 AM</p>
+                </div>
+            </div>
+        </dialog>
+        
+        <dialog id="mc-dialog" class="modal">
+            <div class="dialog-header">
+                <button class="close-btn"></button>
+            </div>
+            <div class="dialog-content">
+                <img class="class-img" src="/resources/classes/c11.png" alt="Spinning Image">
+                <h2 class="fs-600">Spinning</h2>
+                <p class="description">Spinning is an indoor cycling class that combines cardio, strength, and endurance
+                    training on stationary bikes. It's a
+                    high-energy workout that simulates outdoor cycling with various intensity levels. Enjoy an
+                    exhilarating ride that burns
+                    calories, improves cardiovascular health, and strengthens your lower body muscles.</p>
+                <div class="schedule">
+                    <img class="cal-icon" src="resources/zondicons_calendar.svg" alt="Calendar Icon">
+                    <p>Class Schedule: Mon, Wed, Fri | 10:00 AM - 11:00 AM</p>
+                </div>
+            </div>
+        </dialog>
+        <dialog id="pc-dialog" class="modal">
+            <div class="dialog-header">
+                <button class="close-btn"></button>
+            </div>
+            <div class="dialog-content">
+                <img class="class-img" src="/resources/classes/c11.png" alt="Spinning Image">
+                <h2 class="fs-600">Spinning</h2>
+                <p class="description">Spinning is an indoor cycling class that combines cardio, strength, and endurance
+                    training on stationary bikes. It's a
+                    high-energy workout that simulates outdoor cycling with various intensity levels. Enjoy an
+                    exhilarating ride that burns
+                    calories, improves cardiovascular health, and strengthens your lower body muscles.</p>
+                <div class="schedule">
+                    <img class="cal-icon" src="resources/zondicons_calendar.svg" alt="Calendar Icon">
+                    <p>Class Schedule: Mon, Wed, Fri | 10:00 AM - 11:00 AM</p>
+                </div>
+            </div>
+        </dialog>
+        <dialog id="ta-dialog" class="modal">
+            <div class="dialog-header">
+                <button class="close-btn"></button>
+            </div>
+            <div class="dialog-content">
+                <img class="class-img" src="/resources/classes/c11.png" alt="Spinning Image">
+                <h2 class="fs-600">Spinning</h2>
+                <p class="description">Spinning is an indoor cycling class that combines cardio, strength, and endurance
+                    training on stationary bikes. It's a
+                    high-energy workout that simulates outdoor cycling with various intensity levels. Enjoy an
+                    exhilarating ride that burns
+                    calories, improves cardiovascular health, and strengthens your lower body muscles.</p>
+                <div class="schedule">
+                    <img class="cal-icon" src="resources/zondicons_calendar.svg" alt="Calendar Icon">
+                    <p>Class Schedule: Mon, Wed, Fri | 10:00 AM - 11:00 AM</p>
+                </div>
+            </div>
+        </dialog>
+        <dialog id="circuit-dialog" class="modal">
+            <div class="dialog-header">
+                <button class="close-btn"></button>
+            </div>
+            <div class="dialog-content">
+                <img class="class-img" src="/resources/classes/c11.png" alt="Spinning Image">
+                <h2 class="fs-600">Spinning</h2>
+                <p class="description">Spinning is an indoor cycling class that combines cardio, strength, and endurance
+                    training on stationary bikes. It's a
+                    high-energy workout that simulates outdoor cycling with various intensity levels. Enjoy an
+                    exhilarating ride that burns
+                    calories, improves cardiovascular health, and strengthens your lower body muscles.</p>
+                <div class="schedule">
+                    <img class="cal-icon" src="resources/zondicons_calendar.svg" alt="Calendar Icon">
+                    <p>Class Schedule: Mon, Wed, Fri | 10:00 AM - 11:00 AM</p>
+                </div>
+            </div>
+        </dialog>
+        <dialog id="hiit-dialog" class="modal">
+            <div class="dialog-header">
+                <button class="close-btn"></button>
+            </div>
+            <div class="dialog-content">
+                <img class="class-img" src="/resources/classes/c11.png" alt="Spinning Image">
+                <h2 class="fs-600">Spinning</h2>
+                <p class="description">Spinning is an indoor cycling class that combines cardio, strength, and endurance
+                    training on stationary bikes. It's a
+                    high-energy workout that simulates outdoor cycling with various intensity levels. Enjoy an
+                    exhilarating ride that burns
+                    calories, improves cardiovascular health, and strengthens your lower body muscles.</p>
+                <div class="schedule">
+                    <img class="cal-icon" src="resources/zondicons_calendar.svg" alt="Calendar Icon">
+                    <p>Class Schedule: Mon, Wed, Fri | 10:00 AM - 11:00 AM</p>
+                </div>
+            </div>
+        </dialog>
+        <dialog id="sa-dialog" class="modal">
+            <div class="dialog-header">
+                <button class="close-btn"></button>
+            </div>
+            <div class="dialog-content">
+                <img class="class-img" src="/resources/classes/c11.png" alt="Spinning Image">
+                <h2 class="fs-600">Spinning</h2>
+                <p class="description">Spinning is an indoor cycling class that combines cardio, strength, and endurance
+                    training on stationary bikes. It's a
+                    high-energy workout that simulates outdoor cycling with various intensity levels. Enjoy an
+                    exhilarating ride that burns
+                    calories, improves cardiovascular health, and strengthens your lower body muscles.</p>
+                <div class="schedule">
+                    <img class="cal-icon" src="resources/zondicons_calendar.svg" alt="Calendar Icon">
+                    <p>Class Schedule: Mon, Wed, Fri | 10:00 AM - 11:00 AM</p>
+                </div>
+            </div>
+        </dialog>
+        <dialog id="ms-dialog" class="modal">
+            <div class="dialog-header">
+                <button class="close-btn"></button>
+            </div>
+            <div class="dialog-content">
+                <img class="class-img" src="/resources/classes/c11.png" alt="Spinning Image">
+                <h2 class="fs-600">Spinning</h2>
+                <p class="description">Spinning is an indoor cycling class that combines cardio, strength, and endurance
+                    training on stationary bikes. It's a
+                    high-energy workout that simulates outdoor cycling with various intensity levels. Enjoy an
+                    exhilarating ride that burns
+                    calories, improves cardiovascular health, and strengthens your lower body muscles.</p>
+                <div class="schedule">
+                    <img class="cal-icon" src="resources/zondicons_calendar.svg" alt="Calendar Icon">
+                    <p>Class Schedule: Mon, Wed, Fri | 10:00 AM - 11:00 AM</p>
+                </div>
+            </div>
+        </dialog>
+        <dialog id="mh-dialog" class="modal">
+            <div class="dialog-header">
+                <button class="close-btn"></button>
+            </div>
+            <div class="dialog-content">
+                <img class="class-img" src="/resources/classes/c11.png" alt="Spinning Image">
+                <h2 class="fs-600">Spinning</h2>
+                <p class="description">Spinning is an indoor cycling class that combines cardio, strength, and endurance
+                    training on stationary bikes. It's a
+                    high-energy workout that simulates outdoor cycling with various intensity levels. Enjoy an
+                    exhilarating ride that burns
+                    calories, improves cardiovascular health, and strengthens your lower body muscles.</p>
+                <div class="schedule">
+                    <img class="cal-icon" src="resources/zondicons_calendar.svg" alt="Calendar Icon">
+                    <p>Class Schedule: Mon, Wed, Fri | 10:00 AM - 11:00 AM</p>
+                </div>
+            </div>
+        </dialog>
+        <dialog id="fa-dialog" class="modal">
+            <div class="dialog-header">
+                <button class="close-btn"></button>
+            </div>
+            <div class="dialog-content">
+                <img class="class-img" src="/resources/classes/c11.png" alt="Spinning Image">
+                <h2 class="fs-600">Spinning</h2>
+                <p class="description">Spinning is an indoor cycling class that combines cardio, strength, and endurance
+                    training on stationary bikes. It's a
+                    high-energy workout that simulates outdoor cycling with various intensity levels. Enjoy an
+                    exhilarating ride that burns
+                    calories, improves cardiovascular health, and strengthens your lower body muscles.</p>
+                <div class="schedule">
+                    <img class="cal-icon" src="resources/zondicons_calendar.svg" alt="Calendar Icon">
+                    <p>Class Schedule: Mon, Wed, Fri | 10:00 AM - 11:00 AM</p>
+                </div>
+            </div>
+        </dialog>
+        <dialog id="run-dialog" class="modal">
+            <div class="dialog-header">
+                <button class="close-btn"></button>
+            </div>
+            <div class="dialog-content">
+                <img class="class-img" src="/resources/classes/c11.png" alt="Spinning Image">
+                <h2 class="fs-600">Spinning</h2>
+                <p class="description">Spinning is an indoor cycling class that combines cardio, strength, and endurance
+                    training on stationary bikes. It's a
+                    high-energy workout that simulates outdoor cycling with various intensity levels. Enjoy an
+                    exhilarating ride that burns
+                    calories, improves cardiovascular health, and strengthens your lower body muscles.</p>
+                <div class="schedule">
+                    <img class="cal-icon" src="resources/zondicons_calendar.svg" alt="Calendar Icon">
+                    <p>Class Schedule: Mon, Wed, Fri | 10:00 AM - 11:00 AM</p>
+                </div>
+            </div>
+        </dialog>
+        <dialog id="as-dialog" class="modal">
+            <div class="dialog-header">
+                <button class="close-btn"></button>
+            </div>
+            <div class="dialog-content">
+                <img class="class-img" src="/resources/classes/c11.png" alt="Spinning Image">
+                <h2 class="fs-600">Spinning</h2>
+                <p class="description">Spinning is an indoor cycling class that combines cardio, strength, and endurance
+                    training on stationary bikes. It's a
+                    high-energy workout that simulates outdoor cycling with various intensity levels. Enjoy an
+                    exhilarating ride that burns
+                    calories, improves cardiovascular health, and strengthens your lower body muscles.</p>
+                <div class="schedule">
+                    <img class="cal-icon" src="resources/zondicons_calendar.svg" alt="Calendar Icon">
+                    <p>Class Schedule: Mon, Wed, Fri | 10:00 AM - 11:00 AM</p>
+                </div>
+            </div>
+        </dialog>
+
+
+
+
         <a href="#"><button class="button-primary"><span>Join us now</span></button></a>
 
     </main>
