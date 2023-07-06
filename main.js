@@ -3,6 +3,16 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((response) => response.text())
     .then((html) => {
       document.getElementById("header-placeholder").innerHTML = html;
+
+      const currentPageUrl = window.location.href;
+
+      const navLinks = document.querySelectorAll(".nav-link");
+      navLinks.forEach((link) => {
+        if (link.href === currentPageUrl) {
+          console.log(link.href)
+          link.classList.add("current-page");
+        }
+      });
     });
 
   fetch("footer.html")
@@ -27,26 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         nav.toggleAttribute("data-visible");
         header.toggleAttribute("data-overlay");
-      });
-
-      const slider = new A11YSlider(document.querySelector(".slider"), {
-        adaptiveHeight: true,
-        dots: true,
-        arrows: false,
-        responsive: {
-          770: {
-            arrows: true,
-          },
-        },
-      });
-
-      const slider2 = new A11YSlider(document.querySelector(".slider2"), {
-        adaptiveHeight: true,
-        dots: true,
-        arrows: false,
-        SlidesToShow: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
       });
 
       const observer = new IntersectionObserver((entries) => {
@@ -79,6 +69,26 @@ document.addEventListener("DOMContentLoaded", function () {
       slideUpElements.forEach((el) => {
         el.classList.add("hide-down");
         observer.observe(el);
+      });
+
+      const slider = new A11YSlider(document.querySelector(".slider"), {
+        adaptiveHeight: true,
+        dots: true,
+        arrows: false,
+        responsive: {
+          770: {
+            arrows: true,
+          },
+        },
+      });
+
+      const slider2 = new A11YSlider(document.querySelector(".slider2"), {
+        adaptiveHeight: true,
+        dots: true,
+        arrows: false,
+        SlidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
       });
     });
 });

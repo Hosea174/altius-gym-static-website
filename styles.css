@@ -151,7 +151,7 @@ a {
 }
 
 .flow {
-  padding-block: 2.5em;
+  padding-block: var(--flow-spacer);
 }
 
 .even-columns {
@@ -479,7 +479,21 @@ header {
 }
 
 
+.current-page {
+  position: relative;
+}
 
+.current-page::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(50%);
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background-color: var(--clr-accent-400);
+}
 
 
 .nav-list {
