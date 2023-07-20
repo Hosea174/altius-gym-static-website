@@ -506,10 +506,13 @@ h1,
 #coach-3 {
   background-image: url("/resources/c3-bg.png");
 }
+#coach-4 {
+  background-image: url("/resources/c3-bg.png");
+}
 
 .coach-name {
   -webkit-text-fill-color: transparent;
-  font-size: 6rem;
+  font-size: 5rem;
   font-family: 'Roboto' sans-serif;
   font-weight: var(--fw-semi-bold);
 }
