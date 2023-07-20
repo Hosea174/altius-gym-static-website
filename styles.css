@@ -432,14 +432,14 @@ header {
   list-style: none;
 }
 
-.socials li {
+.socials a {
+  display: block;
   height: 21px;
   width: 19px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   transition: all 0.3s ease-in-out;
-
 }
 
 #tiktok-primary {
