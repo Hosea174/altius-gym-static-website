@@ -30,7 +30,7 @@
   --fs-900: 3.9rem;
 
   --fs-body: var(--fs-400);
-  --fs-primary-heading: var(--fs-800);
+  --fs-primary-heading: 5.4vw;
   --fs-secondary-heading: var(--fs-700);
   --fs-nav: var(--fs-400);
   --fs-button: var(--fs-400);
@@ -50,7 +50,7 @@
 
 @media (min-width: 50em) {
   :root {
-    --fs-primary-heading: var(--fs-900);
+    /* --fs-primary-heading: var(--fs-900); */
     --fs-secondary-heading: var(--fs-800);
     --fs-tertiary-heading: var(--fs-700);
     --fs-nav: var(--fs-400);
@@ -84,7 +84,6 @@ html:focus-within {
 
 html {
   scroll-behavior: smooth;
-
 }
 
 html,
@@ -123,7 +122,6 @@ a {
   user-select: none;
   pointer-events: auto;
 }
-
 
 /* Utility classes */
 .visually-hidden {
@@ -244,7 +242,7 @@ a {
 }
 
 .fs-primary-heading {
-  font-size: var(--fs-primary-heading);
+  font-size: clamp(2.4rem, var(--fs-primary-heading), 4.2rem);
   line-height: 1.2;
   letter-spacing: 0.02em;
 }
@@ -301,6 +299,26 @@ a {
 
 .padding-block-700 {
   padding-block: var(--size-700);
+}
+
+/* Scrollbar Styles */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2c3e50;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--clr-primary-300);
+  border-radius: 6px;
+  border: 3px solid #2c3e50;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--clr-primary-400);
 }
 
 /* general styling */
@@ -403,6 +421,46 @@ body {
   opacity: 1;
 }
 
+/* animations */
+
+.hide-left {
+  opacity: 0;
+  transition: all .85s ease;
+  transform: translateX(-100%);
+  filter: blur(5px);
+}
+
+.hide-right {
+  opacity: 0;
+  transition: all .85s ease;
+  transform: translateX(100%);
+  filter: blur(5px);
+}
+
+.hide-down {
+  opacity: 0;
+  transition: all .85s ease;
+  transform: translateY(70px);
+  filter: blur(5px);
+}
+
+.slide-right-appear {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+
+.slide-left-appear {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+
+.slide-up-appear {
+  transform: translateY(0);
+  opacity: 1;
+  filter: blur(0);
+}
 
 /* navigation */
 header {
@@ -411,7 +469,7 @@ header {
 }
 
 .logo {
-  max-width: 50%;
+  width: 100px;
 }
 
 .nav-wrapper {
@@ -460,24 +518,23 @@ header {
 
 #tiktok-primary:hover {
   background-image: url("/resources/tiktok-reverse.svg");
-  transform: translateY(-5px)
+  transform: translateY(-5px);
 }
 
 #fb-primary:hover {
   background-image: url("/resources/fb-reverse.svg");
-  transform: translateY(-5px)
+  transform: translateY(-5px);
 }
 
 #insta-primary:hover {
   background-image: url("/resources/insta-reverse.svg");
-  transform: translateY(-5px)
+  transform: translateY(-5px);
 }
 
 #yt-primary:hover {
   background-image: url("/resources/yt-reverse.svg");
-  transform: translateY(-5px)
+  transform: translateY(-5px);
 }
-
 
 .current-page {
   position: relative;
@@ -491,10 +548,13 @@ header {
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(270deg, #00C7A1 0%, rgba(255, 204, 0, 0.00) 0.01%, #FC0 50.83%, rgba(255, 204, 0, 0.00) 93.54%);
-  box-shadow: 0px -19px 29px 0px #FC0;
+  background: linear-gradient(270deg,
+      #00c7a1 0%,
+      rgba(255, 204, 0, 0) 0.01%,
+      #fc0 50.83%,
+      rgba(255, 204, 0, 0) 93.54%);
+  box-shadow: 0px -19px 29px 0px #fc0;
 }
-
 
 .nav-list {
   font-size: var(--fs-nav);
@@ -575,10 +635,6 @@ header {
   .mobile-nav-toggle .menu-close {
     display: none;
   }
-
-  .fs-primary-heading {
-    font-size: var(--fs-700);
-  }
 }
 
 @media (max-width: 28em) {
@@ -602,10 +658,9 @@ header::before {
   background-image: url("/resources/blue-light.svg");
   background-position: top left;
   background-repeat: no-repeat;
-  background-size: 100vh;
+  background-size: 700px ;
   z-index: -2;
 }
-
 
 /* footer */
 footer {
@@ -620,9 +675,7 @@ footer {
   text-align: center;
   display: flex;
   justify-content: center;
-
 }
-
 
 .footer-form {
   margin-block: 90px 20px;
@@ -645,14 +698,14 @@ footer {
 .button--submit {
   position: relative;
   min-height: 50px;
-  padding: .5em 1.5em;
+  padding: 0.5em 1.5em;
   border: none;
   border-radius: 0 6px 6px 0;
   background-color: var(--clr-primary-400);
   color: #fff;
   font-size: 15px;
   cursor: pointer;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   z-index: 1;
 }
 
