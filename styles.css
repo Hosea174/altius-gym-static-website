@@ -32,6 +32,7 @@
   --fs-body: var(--fs-400);
   --fs-primary-heading: 5.4vw;
   --fs-secondary-heading: var(--fs-700);
+  --fs-tertiary-heading: var(--fs-700);
   --fs-nav: var(--fs-400);
   --fs-button: var(--fs-400);
 
@@ -50,9 +51,7 @@
 
 @media (min-width: 50em) {
   :root {
-    /* --fs-primary-heading: var(--fs-900); */
     --fs-secondary-heading: var(--fs-800);
-    --fs-tertiary-heading: var(--fs-700);
     --fs-nav: var(--fs-400);
   }
 }
@@ -263,11 +262,9 @@ a {
 
 .fs-tertiary-heading {
   font-size: var(--fs-tertiary-heading);
-  white-space: nowrap;
 }
 
-.fs-tertiary-heading::after {
-  content: "";
+.fs-tertiary-heading .header-dot {
   display: inline-block;
   width: 13px;
   height: 13px;
@@ -658,7 +655,7 @@ header::before {
   background-image: url("/resources/blue-light.svg");
   background-position: top left;
   background-repeat: no-repeat;
-  background-size: 700px ;
+  background-size: 700px;
   z-index: -2;
 }
 
