@@ -32,7 +32,7 @@
   --fs-body: var(--fs-400);
   --fs-primary-heading: 5.4vw;
   --fs-secondary-heading: var(--fs-700);
-  --fs-tertiary-heading: var(--fs-700);
+  --fs-tertiary-heading: var(--fs-600);
   --fs-nav: var(--fs-400);
   --fs-button: var(--fs-400);
 
@@ -49,9 +49,10 @@
   --flow-spacer: 1.2em;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 30em) {
   :root {
     --fs-secondary-heading: var(--fs-800);
+    --fs-tertiary-heading: var(--fs-700);
     --fs-nav: var(--fs-400);
   }
 }
@@ -298,6 +299,12 @@ a {
   padding-block: var(--size-700);
 }
 
+@media (max-width: 50em) {
+  .fs-secondary-heading {
+    margin-block-end: var(--size-500);
+  }
+}
+
 /* Scrollbar Styles */
 
 ::-webkit-scrollbar {
@@ -422,21 +429,21 @@ body {
 
 .hide-left {
   opacity: 0;
-  transition: all .85s ease;
+  transition: all 0.85s ease;
   transform: translateX(-100%);
   filter: blur(5px);
 }
 
 .hide-right {
   opacity: 0;
-  transition: all .85s ease;
+  transition: all 0.85s ease;
   transform: translateX(100%);
   filter: blur(5px);
 }
 
 .hide-down {
   opacity: 0;
-  transition: all .85s ease;
+  transition: all 0.85s ease;
   transform: translateY(70px);
   filter: blur(5px);
 }

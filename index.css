@@ -16,12 +16,10 @@
   display: flex;
   align-items: center;
   padding-inline: calc((100vw - 1230px)/2);
-  height: 85vh;
-
 }
 
 .slider2 li img {
-  height: 611px;
+  width: clamp(250px, 50vw, 500px);
 }
 
 .slider>*,
@@ -327,12 +325,13 @@ h1,
 }
 
 
+.service-img-wrapper {
+  height: 360px;
+}
 
 #services img {
   width: 100%;
-  height: 350px;
-  width: 100%;
-  /* height: 80%; */
+  height: 100%;
   object-fit: cover;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 15px;
@@ -405,7 +404,7 @@ h1,
 
 @media(max-width: 50em) {
   #services .container {
-    gap: var(--size-500);
+    gap: var(--size-700);
   }
 
   #services .even-columns {
@@ -436,8 +435,6 @@ h1,
 .abt-us-text {
   text-align: center;
   line-height: var(--size-600);
-  width: 83%;
-  min-width: 420px;
   margin-inline: auto;
 }
 
@@ -449,7 +446,7 @@ h1,
 }
 
 #about-us img {
-  max-width: 65%;
+  width: 400px;
   margin-inline: auto;
 }
 
@@ -458,6 +455,11 @@ h1,
   margin: var(--size-800) auto;
 }
 
+@media (max-width: 30em) {
+  #about-us img {
+    width: 325px;
+  }
+}
 
 /* testimonials */
 
@@ -478,20 +480,30 @@ h1,
   margin: 0 auto;
 }
 
-/* meet coaches */
+@media(max-width: 50em) {
+  #testimonials {
+    background-size: cover;
+  }
+}
 
-.slider2>li:nth-child(odd) {
-  text-align: right;
+/* meet coaches */
+.slider2 li {
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 100% 83%;
+  background-repeat: no-repeat;
+  padding: var(--size-500);
+  height: 655px;
+  background-size: cover;
+}
+
+.slider2>li:nth-child(odd) {
+  text-align: right;
 }
 
 .slider2>li:nth-child(even) {
   text-align: left;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: 100% 83%;
+
 }
 
 #coach-1 {
@@ -512,14 +524,41 @@ h1,
 
 .coach-name {
   -webkit-text-fill-color: transparent;
-  font-size: 5rem;
+  font-size: max(37px, 6vw);
   font-family: 'Roboto' sans-serif;
   font-weight: var(--fw-semi-bold);
+}
+
+
+@media (max-width: 50em) {
+  .slider2 li {
+    gap: var(--size-600);
+    height: auto;
+    justify-content: center;
+  }
+
+  .slider2>li:nth-child(odd) {
+    flex-direction: column;
+  }
+
+  .slider2>li:nth-child(even) {
+    flex-direction: column-reverse;
+
+  }
+
+  .coach-info {
+    text-align: center;
+  }
+
+  .coach-bio {
+    font-size: 14px;
+  }
 }
 
 /* contact us */
 
 #google-map iframe {
+  height: 100%;
   width: 100%;
   border-radius: 5px;
 }
@@ -666,4 +705,23 @@ h1,
 .contact-info div {
   display: flex;
   gap: var(--size-200);
+}
+
+
+@media (max-width: 67em) {
+  .contact-wrapper {
+    flex-direction: column-reverse;
+  }
+
+  #google-map iframe {
+    height: 400px;
+  }
+}
+
+@media (max-width: 510px) {
+  .info-wrapper {
+    flex-direction: column;
+    align-items: start;
+    gap: var(--size-600);
+  }
 }
