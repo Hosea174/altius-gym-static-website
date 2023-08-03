@@ -7,6 +7,7 @@ header::before {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -14,6 +15,20 @@ header::before {
   height: 55vh;
   width: 100%;
   z-index: -1;
+}
+
+@media (max-width: 50em) {
+  .banner {
+    top: 30px;
+  }
+
+  .banner h1 {
+    line-height: normal;
+  }
+
+  .banner p {
+    font-size: .85rem;
+  }
 }
 
 .classes-list {
@@ -130,25 +145,40 @@ header::before {
   opacity: 0.8;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 75em) {
   .container .card {
-    width: 230px;
-    border-radius: 15px;
+    width: 45vw;
   }
 
   .container .card .img-box {
-    width: 185px;
-    border-radius: 10px;
-  }
-
-  .container .card .content p {
-    font-size: 0.8rem;
-  }
-
-  .container .card .content a {
-    font-size: 0.9rem;
+    width: 80%;
+    height: 70%;
   }
 }
+
+@media (max-width: 45em) {
+  .classes-list {
+    justify-content: center;
+  }
+
+  .container .card {
+    width: 90vw;
+  }
+
+  .container .card .img-box {
+    height: 60%;
+  }
+
+  .container .card:hover {
+    height: 380px;
+  }
+
+  .container .card:hover .content {
+    height: -webkit-fill-available;
+  }
+}
+
+
 
 .modal {
   padding: 40px 20px;
@@ -156,8 +186,8 @@ header::before {
   color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  width: 70%;
-  height: 80%;
+  width: 85%;
+  height: 90%;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -229,6 +259,12 @@ header::before {
   margin: auto;
 }
 
+@media (max-width: 75em) {
+  .modal {
+    width: 85%;
+    height: 90%;
+  }
+}
 
 footer {
   position: relative;
