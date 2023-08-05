@@ -9,9 +9,10 @@
 
 .pricing-plans {
     display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
     justify-content: space-evenly;
     position: relative;
-    min-height: 800px;
 }
 
 
@@ -33,22 +34,22 @@
     padding: 1rem 2rem;
 }
 
-.individual-plan {
+.plan {
     height: fit-content;
-    min-width: 500px;
-    border: 1px solid var(--clr-primary-300);
-    border-top: 5px solid var(--clr-primary-300);
-    background: rgba(0, 123, 182, 0.06);
+    width: clamp(450px, 47vw, 500px);
     backdrop-filter: blur(100px);
 }
 
+.individual-plan {
+    border: 1px solid var(--clr-primary-300);
+    border-top: 5px solid var(--clr-primary-300);
+    background: rgba(0, 123, 182, 0.06);
+}
+
 .group-plan {
-    height: fit-content;
-    min-width: 500px;
     border: 1px solid var(--clr-accent-400);
     border-top: 5px solid var(--clr-accent-400);
     background: rgba(255, 204, 0, 0.04);
-    backdrop-filter: blur(100px);
 }
 
 .individual-plan .package,
@@ -100,5 +101,11 @@
 
 .button-primary {
     display: block;
-    margin: auto;
+    margin: 60px auto;
+}
+
+@media (max-width: 380px) {
+    .box ul {
+        font-size: 14px;
+    }
 }

@@ -19,6 +19,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.389);
     transition: all .3s ease-in-out;
     border-radius: 8px;
@@ -45,12 +46,24 @@
     opacity: 1;
 }
 
-figure {
+.blur-load {
+    position: relative;
+
     width: 100%;
     height: 100%;
     border-radius: 8px;
+    background-size: cover;
+    background-position: center;
 }
 
+.blur-load.loaded>img {
+    opacity: 1;
+    transition: opacity 200ms ease-in-out;
+}
+
+.blur-load>img {
+    opacity: 0;
+}
 
 .gallery-item-1 {
     grid-column: 1 / 5;
@@ -134,20 +147,13 @@ figure {
 }
 
 
-
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-    .column {
-        flex: 50%;
-        max-width: 50%;
+@media (max-width: 50em) {
+    .gallery {
+        display: flex;
+        flex-direction: column;
     }
-}
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-    .column {
-        flex: 100%;
-        max-width: 100%;
+    .fs-secondary-heading {
+        font-size: clamp(20px, 7vw, var(--fs-800)) !important;
     }
 }
