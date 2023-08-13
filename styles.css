@@ -295,6 +295,14 @@ a {
   font-size: var(--fs-700);
 }
 
+.fs-800 {
+  font-size: var(--fs-800);
+}
+
+.fs-900 {
+  font-size: var(--fs-900);
+}
+
 .padding-block-700 {
   padding-block: var(--size-700);
 }
@@ -430,15 +438,15 @@ body {
 .hide-left {
   opacity: 0;
   transition: all 0.85s ease;
-  transform: translateX(-100%);
-  filter: blur(5px);
+  transform: translateX(-30%);
+  filter: blur(3px);
 }
 
 .hide-right {
   opacity: 0;
   transition: all 0.85s ease;
-  transform: translateX(100%);
-  filter: blur(5px);
+  transform: translateX(30%);
+  filter: blur(3px);
 }
 
 .hide-down {

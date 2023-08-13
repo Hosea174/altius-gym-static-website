@@ -1,0 +1,58 @@
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    background: linear-gradient(180deg, #001C33 0%, rgba(0, 24, 45, 0.75) 21.81%, rgba(0, 33, 61, 0.00) 46.67%);
+    height: 50%;
+    z-index: -1;
+}
+
+body {
+    background: #002E4E;
+}
+
+#sauna .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80vh;
+    gap: 60px;
+}
+
+
+.bg-img {
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    object-position: center;
+    z-index: -2;
+    height: 100vh;
+    width: 100vw;
+    opacity: .7;
+}
+
+.spa-open-hrs {
+    background-image: url("/resources/open-hrs-bg.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 250px;
+    padding: 2rem;
+}
+
+.header-banner {
+    text-align: center;
+}
+
+.header-banner h1 {
+    font-size: clamp(var(--fs-700), 5vw, var(--fs-900));
+    line-height: 2rem;
+}
+
+@media (max-width: 445px) {
+    .spa-open-hrs {
+        font-size: 14px;
+        padding: 1rem;
+    }
+}
