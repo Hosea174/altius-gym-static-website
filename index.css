@@ -549,8 +549,8 @@ h1,
   font-size: max(37px, 6vw);
   font-family: 'Roboto' sans-serif;
   font-weight: var(--fw-semi-bold);
-  margin-bottom: 10px;
   line-height: 4rem;
+  margin-bottom: 20px;
 }
 
 
@@ -584,10 +584,10 @@ h1,
   .coach-info {
     text-align: center;
   }
-  .coach-name {
-    -webkit-text-stroke-width: 2px !important; 
-    line-height: 3rem;
 
+  .coach-name {
+    -webkit-text-stroke-width: 2px !important;
+    line-height: 3rem;
   }
 
   .coach-bio {

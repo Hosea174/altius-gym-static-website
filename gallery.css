@@ -9,7 +9,7 @@
 .gallery {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(25, 5vw);
+    grid-template-rows: repeat(33, 5vw);
     grid-gap: 25px;
 }
 
@@ -144,6 +144,27 @@
 .gallery-item-16 {
     grid-column: 1 / 9;
     grid-row: 22 / 26;
+}
+
+.gallery-item-17 {
+    grid-column: 1 / 5;
+    grid-row: 26 / 30;
+}
+
+.gallery-item-18 {
+    grid-column: 5 / 9;
+    grid-row: 26 / 30;
+}
+
+
+.gallery-item-19 {
+    grid-column: 1 / 6;
+    grid-row: 30 / 34;
+}
+
+.gallery-item-20 {
+    grid-column: 6 / 9;
+    grid-row: 30 / 34;
 }
 
 
