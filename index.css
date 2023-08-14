@@ -488,6 +488,7 @@ h1,
 
 /* meet coaches */
 .slider2 li {
+  position: relative;
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 100% 83%;
@@ -503,23 +504,44 @@ h1,
 
 .slider2>li:nth-child(even) {
   text-align: left;
-
 }
 
-#coach-1 {
-  background-image: url("/resources/c1-bg.png");
+.slider2>li:nth-child(even)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.00) 2.75%, rgba(0, 0, 0, 0.57) 42.16%, #000 100%);
+  pointer-events: none;
 }
 
-#coach-2 {
-  background-image: url("/resources/c2-bg.png");
+.slider2>li:nth-child(odd)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 2.75%, rgba(0, 0, 0, 0.57) 42.16%, #000 100%);
+  pointer-events: none;
 }
 
-#coach-3 {
-  background-image: url("/resources/c3-bg.png");
+.blue-bg {
+  background-image: url("/resources/bg-blue.png");
 }
 
-#coach-4 {
-  background-image: url("/resources/c3-bg.png");
+.yellow-bg {
+  background-image: url("/resources/bg-yellow.png");
+}
+
+.green-bg {
+  background-image: url("/resources/bg-green.png");
+}
+
+.coach-info {
+  z-index: 2;
 }
 
 .coach-name {
@@ -527,6 +549,8 @@ h1,
   font-size: max(37px, 6vw);
   font-family: 'Roboto' sans-serif;
   font-weight: var(--fw-semi-bold);
+  margin-bottom: 10px;
+  line-height: 4rem;
 }
 
 
@@ -546,8 +570,24 @@ h1,
 
   }
 
+  .slider2>li:nth-child(odd)::before,
+  .slider2>li:nth-child(even)::before {
+    top: auto;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 2.75%, rgba(0, 0, 0, 0.57) 42.16%, #000 100%);
+  }
+
   .coach-info {
     text-align: center;
+  }
+  .coach-name {
+    -webkit-text-stroke-width: 2px !important; 
+    line-height: 3rem;
+
   }
 
   .coach-bio {
