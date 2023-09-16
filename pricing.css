@@ -40,7 +40,7 @@
     backdrop-filter: blur(100px);
 }
 
-.individual-plan {
+.individual-plan, .couples-plan {
     border: 1px solid var(--clr-primary-300);
     border-top: 5px solid var(--clr-primary-300);
     background: rgba(0, 123, 182, 0.06);
@@ -52,8 +52,7 @@
     background: rgba(255, 204, 0, 0.04);
 }
 
-.individual-plan .package,
-.group-plan .package {
+.package {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -62,7 +61,7 @@
     background-position: center;
 }
 
-.individual-plan .package {
+.individual-plan .package, .couples-plan .package {
     background-image: url("/resources/custom-border.svg");
 }
 
@@ -72,7 +71,7 @@
 
 
 .package-perks li:before,
-.discount li:before {
+.prices li:before {
     content: "";
     display: inline-block;
     width: 15px;
@@ -95,7 +94,7 @@
 }
 
 
-.discount li:before {
+.prices li:before {
     background-image: url("/resources/discount.svg");
 }
 
