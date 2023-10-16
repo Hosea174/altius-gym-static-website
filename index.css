@@ -475,7 +475,7 @@ h1,
 
 #testimonials h3 {
   text-align: center;
-  padding-top: 1rem;
+  text-transform: capitalize;
 }
 
 #testimonials button.button-primary {
@@ -553,7 +553,7 @@ h1,
   font-family: 'Roboto' sans-serif;
   font-weight: var(--fw-semi-bold);
   line-height: 4rem;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 
 
@@ -598,6 +598,40 @@ h1,
   }
 }
 
+/* taekwondo instructors */
+.box .instructor{
+  display: flex;
+  gap: 4rem;
+  margin-bottom: 3rem;
+  align-items: center;
+}
+
+.instructor img {
+  width: 40%;
+}
+
+.instructor .coach-name {
+  line-height: 120%;
+  font-size: 3.5rem;
+}
+
+@media (max-width: 768px) {
+  
+  .box .instructor {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 4.8rem;
+  }
+
+  .instructor img {
+    width: 80%;
+  }
+
+  .box .instructor:nth-child(2) {
+    flex-direction: column-reverse;
+  }
+}
+
 /* contact us */
 
 #google-map iframe {
@@ -613,6 +647,7 @@ h1,
 #contact-us h3 {
   text-align: center;
   margin-block-end: var(--size-600);
+  text-transform: capitalize;
 }
 
 .form-container {

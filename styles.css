@@ -307,6 +307,15 @@ a {
   padding-block: var(--size-700);
 }
 
+.padding-top-700 {
+  padding-top: var(--size-700);
+}
+
+.padding-bottom-700 {
+  padding-bottom: var(--size-700);
+}
+
+
 @media (max-width: 50em) {
   .fs-secondary-heading {
     margin-block-end: var(--size-500);
