@@ -64,6 +64,9 @@
   z-index: 10;
 }
 
+.slider h3 {
+  margin-top: 1.7rem;
+}
 .a11y-slider-autoplay {
   display: none;
 }
@@ -599,11 +602,42 @@ h1,
 }
 
 /* taekwondo instructors */
-.box .instructor{
+.box .instructor {
   display: flex;
   gap: 4rem;
   margin-bottom: 3rem;
   align-items: center;
+}
+
+.instructor-bio {
+  position: relative;
+}
+
+.instructor-bio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 200px;
+  background-size: 62px 62px;
+  background-position: 0 0, 31px 31px;
+  background-color: rgba(73, 214, 30, 0);
+}
+
+.instructor:nth-child(1) .instructor-bio::before {
+  background-image: radial-gradient(#93f68154 2px, transparent 2px),
+    radial-gradient(#99ffc5a1 2px, transparent 2px);
+}
+
+.instructor:nth-child(2) .instructor-bio::before {
+  background-image: radial-gradient(#fdff9954 2px, transparent 2px),
+    radial-gradient(#fdff99a1 2px, transparent 2px);
+}
+
+.instructor:nth-child(3) .instructor-bio::before {
+  background-image: radial-gradient(#99f5ff54 2px, transparent 2px),
+    radial-gradient(#5dcbf4a1 2px, transparent 2px);
 }
 
 .instructor img {
@@ -616,7 +650,7 @@ h1,
 }
 
 @media (max-width: 768px) {
-  
+
   .box .instructor {
     flex-direction: column;
     text-align: center;
